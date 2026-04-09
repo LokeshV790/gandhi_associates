@@ -10,6 +10,10 @@ from typing import List
 import uuid
 from datetime import datetime, timezone
 
+# Import route modules
+from routes.contact_routes import router as contact_router
+from routes.case_law_routes import router as case_law_router
+from routes.service_routes import router as service_router
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -40,7 +44,7 @@ class StatusCheckCreate(BaseModel):
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Vinod Gandhi & Associates API"}
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
@@ -65,6 +69,11 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+# Include the imported routers in the api_router
+api_router.include_router(contact_router)
+api_router.include_router(case_law_router)
+api_router.include_router(service_router)
 
 # Include the router in the main app
 app.include_router(api_router)

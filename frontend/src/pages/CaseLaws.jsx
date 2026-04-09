@@ -1,62 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const CaseLaws = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [caseLaws, setCaseLaws] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const caseLaws = [
-    {
-      id: 1,
-      title: 'Income Tax Act - Section 80C Deductions',
-      category: 'Income Tax',
-      description: 'Comprehensive guide on eligible deductions under Section 80C including investment options, maximum limits, and documentation requirements.',
-      date: '2024',
-    },
-    {
-      id: 2,
-      title: 'GST Compliance for Small Businesses',
-      category: 'GST',
-      description: 'Understanding GST compliance requirements for small and medium enterprises including filing procedures and deadlines.',
-      date: '2024',
-    },
-    {
-      id: 3,
-      title: 'Corporate Tax Planning Strategies',
-      category: 'Corporate Tax',
-      description: 'Legitimate tax planning strategies for corporations to optimize tax liability while maintaining full compliance.',
-      date: '2023',
-    },
-    {
-      id: 4,
-      title: 'Audit Requirements Under Companies Act',
-      category: 'Company Law',
-      description: 'Statutory audit requirements for various types of companies under the Companies Act 2013.',
-      date: '2023',
-    },
-    {
-      id: 5,
-      title: 'TDS Provisions and Compliance',
-      category: 'Income Tax',
-      description: 'Complete overview of Tax Deducted at Source provisions, rates, and compliance procedures.',
-      date: '2024',
-    },
-    {
-      id: 6,
-      title: 'Foreign Exchange Management Act Guidelines',
-      category: 'FEMA',
-      description: 'Key FEMA regulations for businesses involved in foreign exchange transactions and investments.',
-      date: '2023',
-    },
-  ];
+  useEffect(() => {
+    fetchCaseLaws();
+  }, []);
 
-  const filteredCaseLaws = caseLaws.filter((caseLaw) =>
-    caseLaw.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    caseLaw.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    caseLaw.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const fetchCaseLaws = async (search = '') => {
+    setLoading(true);
+    try {
+      const response = await axios.get(`${API}/case-laws`, {
+        params: search ? { search } : {}
+      });
+      
+      if (response.data.success) {
+        setCaseLaws(response.data.data);
+      }
+    } catch (err) {
+      setError('Failed to load case laws');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSearch = () => {
+    fetchCaseLaws(searchTerm);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+  const filteredCaseLaws = caseLaws;
 
   return (
     <div className="min-h-screen">
@@ -81,8 +71,15 @@ const CaseLaws = () => {
                 placeholder="Search case laws, categories, or topics..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyPress={handleKeyPress}
                 className="pl-12 py-6 text-lg"
               />
+              <Button
+                onClick={handleSearch}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-900 hover:bg-blue-800"
+              >
+                Search
+              </Button>
             </div>
           </div>
         </div>
@@ -91,7 +88,15 @@ const CaseLaws = () => {
       {/* Case Laws Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-16">
-          {filteredCaseLaws.length === 0 ? (
+          {loading ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-gray-600">Loading case laws...</p>
+            </div>
+          ) : error ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-red-600">{error}</p>
+            </div>
+          ) : filteredCaseLaws.length === 0 ? (
             <div className="text-center py-20">
               <p className="text-xl text-gray-600">No case laws found matching your search.</p>
             </div>

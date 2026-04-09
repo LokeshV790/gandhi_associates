@@ -101,3 +101,134 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Test the backend APIs for the Vinod Gandhi & Associates website"
+
+backend:
+  - task: "Health Check API"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "GET /api/ endpoint working correctly. Returns proper message about Vinod Gandhi & Associates API. Status code 200."
+
+  - task: "Contact Form Submission API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/contact_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Initial test failed with 404 error due to circular import issue and missing router inclusion in server.py"
+      - working: true
+        agent: "testing"
+        comment: "POST /api/contact/submit working correctly. Fixed circular import by properly including contact_router in api_router. Accepts contact form data and returns success response with unique ID. Data is being saved to MongoDB."
+
+  - task: "Get Contact Messages API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/contact_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Initial test failed with 500 error due to ObjectId serialization issue in MongoDB queries"
+      - working: true
+        agent: "testing"
+        comment: "GET /api/contact/messages working correctly. Fixed by adding {\"_id\": 0} to exclude MongoDB ObjectId from query results. Returns list of contact messages with proper JSON serialization."
+
+  - task: "Get Case Laws API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/case_law_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Initial test failed with 500 error due to ObjectId serialization issue"
+      - working: true
+        agent: "testing"
+        comment: "GET /api/case-laws working correctly. Fixed ObjectId issue and confirmed 6 seeded case laws are returned. Proper JSON response structure with success, data, and count fields."
+
+  - task: "Search Case Laws API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/case_law_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "GET /api/case-laws?search=tax working correctly. Search functionality properly filters case laws by title, category, and description. Returns 3 tax-related case laws as expected."
+
+  - task: "Get Case Law by Slug API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/case_law_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "GET /api/case-laws/income-tax-80c-deductions working correctly. Returns specific case law details for the given slug with proper JSON structure."
+
+  - task: "Service Inquiry Submission API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/service_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "POST /api/services/inquire working correctly. Accepts service inquiry data and returns success response with unique ID. Data is being saved to MongoDB."
+
+  - task: "Get Service Inquiries API"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/service_routes.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Initial test failed with 500 error due to ObjectId serialization issue"
+      - working: true
+        agent: "testing"
+        comment: "GET /api/services/inquiries working correctly. Fixed ObjectId issue by excluding _id field from query. Returns list of service inquiries with proper JSON serialization."
+
+frontend:
+  # Frontend testing not performed as per testing agent guidelines
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "All backend APIs tested and working"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "testing"
+    message: "Completed comprehensive backend API testing for Vinod Gandhi & Associates website. All 8 APIs are working correctly. Fixed critical issues: 1) Circular import resolved by properly including routers in server.py, 2) ObjectId serialization fixed by excluding _id field from MongoDB queries. Database seeding confirmed with 6 case laws. All endpoints return proper JSON responses and data is being persisted to MongoDB."

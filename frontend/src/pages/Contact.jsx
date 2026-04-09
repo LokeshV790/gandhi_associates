@@ -5,9 +5,14 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { useToast } from '../hooks/use-toast';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,20 +28,35 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    toast({
-      title: 'Message Sent Successfully!',
-      description: 'We will get back to you within 24 hours.',
-    });
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-    });
+    setLoading(true);
+    
+    try {
+      const response = await axios.post(`${API}/contact/submit`, formData);
+      
+      if (response.data.success) {
+        toast({
+          title: 'Message Sent Successfully!',
+          description: response.data.message,
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: error.response?.data?.detail || 'Failed to send message. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -192,9 +212,10 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={loading}
                     className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold"
                   >
-                    Send Message
+                    {loading ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               </CardContent>
