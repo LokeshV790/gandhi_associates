@@ -77,19 +77,96 @@ const About = () => {
 
           {/* Leadership Section */}
           <div className="bg-gray-50 rounded-lg p-12 mb-20">
-            <h3 className="text-3xl font-bold text-blue-900 mb-6 text-center">
+            <h3 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Our Leadership
             </h3>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="text-center mb-6">
+                  <h4 className="text-2xl font-bold text-blue-900 mb-2">
+                    CA Vinod Gandhi
+                  </h4>
+                  <p className="text-amber-600 font-semibold mb-4">
+                    Founder & Managing Partner
+                  </p>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    CA Vinod Gandhi brings over three decades of experience in statutory audits, taxation, and financial advisory. His expertise in handling complex financial cases has made the firm a trusted name in the industry. With a Bachelor of Commerce degree and a Chartered Accountancy qualification, he leads a team dedicated to excellence and client satisfaction.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="text-center mb-6">
+                  <h4 className="text-2xl font-bold text-blue-900 mb-2">
+                    CA Lokesh Paliwal
+                  </h4>
+                  <p className="text-amber-600 font-semibold mb-4">
+                    Partner
+                  </p>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    CA Lokesh Paliwal is a dynamic professional with over 5 years of specialized experience in audit, taxation, and regulatory compliance. His analytical approach and attention to detail have been instrumental in delivering comprehensive solutions to clients. He brings fresh perspectives and innovative strategies to complex financial challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Audit Benefits Section */}
+          <div className="bg-blue-50 rounded-lg p-12 mb-20 border-2 border-blue-100">
+            <h3 className="text-3xl font-bold text-blue-900 mb-6 text-center">
+              How Our Audits Protect Your Business
+            </h3>
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-6">
-                <h4 className="text-2xl font-bold text-blue-900 mb-2">
-                  CA Vinod Gandhi
-                </h4>
-                <p className="text-amber-600 font-semibold mb-4">
-                  Founder & Managing Partner
-                </p>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  CA Vinod Gandhi brings over three decades of experience in statutory audits, taxation, and financial advisory. His expertise in handling complex financial cases has made the firm a trusted name in the industry. With a Bachelor of Commerce degree and a Chartered Accountancy qualification, he leads a team dedicated to excellence and client satisfaction.
+              <p className="text-gray-700 text-lg leading-relaxed mb-6 text-center">
+                Our comprehensive internal and statutory audit services are designed not just for compliance, but as a strategic tool to safeguard your business from future legal complications.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="text-xl font-bold text-blue-900 mb-3">Internal Audits</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Identify and rectify discrepancies before they escalate into legal issues</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Strengthen internal controls to prevent fraud and misappropriation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Ensure regulatory compliance reducing litigation risks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Provide early warning systems for potential legal exposures</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="text-xl font-bold text-blue-900 mb-3">Statutory Audits</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Ensure full compliance with legal and regulatory requirements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Minimize disputes with tax authorities and regulatory bodies</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Create documented evidence of due diligence for legal protection</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Build stakeholder confidence and reduce litigation uncertainties</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 bg-amber-50 border-l-4 border-amber-500 p-6 rounded">
+                <p className="text-gray-800 font-semibold text-center">
+                  Our proactive audit approach helps prevent future litigation by identifying and addressing potential issues before they become legal challenges, making your business more secure and legally compliant.
                 </p>
               </div>
             </div>

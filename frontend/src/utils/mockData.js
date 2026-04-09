@@ -79,7 +79,11 @@ export const mockData = {
   },
   
   contact: {
-    phone: '9156293959',
-    email: 'contact@vinodgandhi.ca',
+    phone: '8275791859',
+    phone2: '9156293959',
+    email: 'vgabackoffice@gmail.com',
+    email2: 'vinodgandhica@gmail.com',
+    email3: 'lokeshvpaliwal@gmail.com',
+    whatsapp: '8275791859',
   },
 };

@@ -219,6 +219,7 @@ const Home = () => {
             <Button 
               size="lg" 
               className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-6 text-base"
+              onClick={() => window.location.href = 'tel:8275791859'}
             >
               <Phone className="mr-2 h-5 w-5" />
               Call: {mockData.contact.phone}

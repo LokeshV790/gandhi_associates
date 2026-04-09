@@ -63,14 +63,26 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '9156293959',
-      link: 'tel:9156293959',
+      content: '8275791859 / 9156293959',
+      link: 'tel:8275791859',
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@vinodgandhi.ca',
-      link: 'mailto:contact@vinodgandhi.ca',
+      content: 'vgabackoffice@gmail.com',
+      link: 'mailto:vgabackoffice@gmail.com',
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      content: 'vinodgandhica@gmail.com',
+      link: 'mailto:vinodgandhica@gmail.com',
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      content: 'lokeshvpaliwal@gmail.com',
+      link: 'mailto:lokeshvpaliwal@gmail.com',
     },
     {
       icon: MapPin,
@@ -101,7 +113,7 @@ const Contact = () => {
       {/* Contact Info Cards */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((info, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 text-center">
@@ -112,12 +124,12 @@ const Contact = () => {
                   {info.link ? (
                     <a
                       href={info.link}
-                      className="text-gray-600 hover:text-amber-500 transition-colors"
+                      className="text-gray-600 hover:text-amber-500 transition-colors text-sm"
                     >
                       {info.content}
                     </a>
                   ) : (
-                    <p className="text-gray-600">{info.content}</p>
+                    <p className="text-gray-600 text-sm">{info.content}</p>
                   )}
                 </CardContent>
               </Card>
