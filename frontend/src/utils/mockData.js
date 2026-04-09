@@ -11,7 +11,7 @@ export const mockData = {
     badge: '30+ Years of Excellence',
     title: 'Trusted Financial Expertise Since 1995',
     subtitle: 'Comprehensive Audit, Taxation & Advisory Solutions for Your Business Growth',
-    description: 'Where complex cases find solutions. Led by CA Vinod Gandhi, we specialize in solving the challenges that others cannot.',
+    description: 'We specialise in solving complex cases and our services help prevent future litigation',
   },
   
   stats: [
