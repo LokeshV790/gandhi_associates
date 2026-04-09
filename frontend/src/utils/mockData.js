@@ -24,7 +24,7 @@ export const mockData = {
   about: {
     title: 'Vinod Gandhi and Associates',
     paragraph1: 'With over 30 years of professional experience, we are a leading Chartered Accountancy firm based in Nagpur, Maharashtra. Our expertise spans statutory audits, taxation, and comprehensive financial advisory services.',
-    paragraph2: 'Under the leadership of CA Vinod Gandhi (CA, BCom), we have built a reputation for solving the most complex financial and compliance challenges. When cases seem unsolvable elsewhere, they find resolution here.',
+    paragraph2: 'Under the leadership of CA Vinod Gandhi (CA, BCom), we have built a reputation for solving the most complex financial and compliance challenges. When cases seem unsolvable elsewhere, they find solution here.',
   },
   
   services: [

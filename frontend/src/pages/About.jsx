@@ -67,7 +67,7 @@ const About = () => {
                 With over 30 years of professional experience, we are a leading Chartered Accountancy firm based in Nagpur, Maharashtra. Our expertise spans statutory audits, taxation, and comprehensive financial advisory services.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Under the leadership of CA Vinod Gandhi (CA, BCom), we have built a reputation for solving the most complex financial and compliance challenges. When cases seem unsolvable elsewhere, they find resolution here.
+                Under the leadership of CA Vinod Gandhi (CA, BCom), we have built a reputation for solving the most complex financial and compliance challenges. When cases seem unsolvable elsewhere, they find solution here.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
                 Our firm has successfully served over 1000 clients across various industries, completing more than 500 comprehensive audits. We pride ourselves on our 100% client satisfaction rate and our ability to navigate the most challenging financial scenarios.
@@ -83,6 +83,13 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="text-center mb-6">
+                  <div className="mb-6">
+                    <img 
+                      src="https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/o2tpjvtt_IMG_1748.jpeg" 
+                      alt="CA Vinod Gandhi" 
+                      className="w-48 h-48 object-cover rounded-full mx-auto border-4 border-blue-900 shadow-lg"
+                    />
+                  </div>
                   <h4 className="text-2xl font-bold text-blue-900 mb-2">
                     CA Vinod Gandhi
                   </h4>
@@ -97,6 +104,13 @@ const About = () => {
               
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="text-center mb-6">
+                  <div className="mb-6">
+                    <img 
+                      src="https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/946e2j2y_a8e30352-65df-4a13-8902-e9e1c7a682a9.jpeg" 
+                      alt="CA Lokesh Paliwal" 
+                      className="w-48 h-48 object-cover rounded-full mx-auto border-4 border-blue-900 shadow-lg"
+                    />
+                  </div>
                   <h4 className="text-2xl font-bold text-blue-900 mb-2">
                     CA Lokesh Paliwal
                   </h4>

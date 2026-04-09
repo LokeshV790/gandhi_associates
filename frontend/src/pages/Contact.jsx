@@ -86,9 +86,15 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: 'Office',
+      title: 'Head Office',
       content: 'Nagpur, Maharashtra, India',
-      link: null,
+      link: 'https://maps.app.goo.gl/pizNAPHmtwzmYQ1dA?g_st=ic',
+    },
+    {
+      icon: MapPin,
+      title: 'Branch Office',
+      content: 'Rasik Building, Behind Old Income Tax Office, Ambapeth, Amravati 444601',
+      link: 'https://maps.app.goo.gl/pizNAPHmtwzmYQ1dA?g_st=ic',
     },
     {
       icon: Clock,
@@ -242,8 +248,28 @@ const Contact = () => {
           <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
             Visit Our Office
           </h2>
-          <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-            <p className="text-gray-600 text-lg">Map Integration - Nagpur, Maharashtra</p>
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5!2d79.08!3d21.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA5JzAwLjAiTiA3OcKwMDQnNDguMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Vinod Gandhi & Associates Location"
+            ></iframe>
+          </div>
+          <div className="text-center mt-6">
+            <a
+              href="https://maps.app.goo.gl/pizNAPHmtwzmYQ1dA?g_st=ic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-900 hover:text-amber-500 font-semibold"
+            >
+              <MapPin className="mr-2 h-5 w-5" />
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </section>
