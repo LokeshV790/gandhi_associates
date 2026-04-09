@@ -99,7 +99,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Business Hours',
-      content: 'Mon - Sat: 9:00 AM - 6:00 PM',
+      content: 'Mon - Sat: 10:30 AM - 7:00 PM',
       link: null,
     },
   ];

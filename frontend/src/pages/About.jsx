@@ -85,9 +85,9 @@ const About = () => {
                 <div className="text-center mb-6">
                   <div className="mb-6">
                     <img 
-                      src="https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/o2tpjvtt_IMG_1748.jpeg" 
+                      src="https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/2umj5gwq_IMG_1750.png" 
                       alt="CA Vinod Gandhi" 
-                      className="w-48 h-48 object-cover rounded-full mx-auto border-4 border-blue-900 shadow-lg"
+                      className="w-64 h-64 object-cover rounded-lg mx-auto border-4 border-blue-900 shadow-lg"
                     />
                   </div>
                   <h4 className="text-2xl font-bold text-blue-900 mb-2">
@@ -106,9 +106,9 @@ const About = () => {
                 <div className="text-center mb-6">
                   <div className="mb-6">
                     <img 
-                      src="https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/946e2j2y_a8e30352-65df-4a13-8902-e9e1c7a682a9.jpeg" 
+                      src="https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/bwi6q0od_a8e30352-65df-4a13-8902-e9e1c7a682a9.jpeg" 
                       alt="CA Lokesh Paliwal" 
-                      className="w-48 h-48 object-cover rounded-full mx-auto border-4 border-blue-900 shadow-lg"
+                      className="w-64 h-64 object-cover rounded-lg mx-auto border-4 border-blue-900 shadow-lg"
                     />
                   </div>
                   <h4 className="text-2xl font-bold text-blue-900 mb-2">
