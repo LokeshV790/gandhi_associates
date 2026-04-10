@@ -14,7 +14,8 @@ const Home = () => {
       <section 
         className="relative min-h-[600px] flex items-center justify-start bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)), url('https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/k20azhwa_IMG_1756.jpeg')`,
+          // backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)), url('https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/k20azhwa_IMG_1756.jpeg')`,
+             backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)), url('https://customer-assets.emergentagent.com/job_preview-staging-11/artifacts/k20azhwa_IMG_1756.jpeg')`,
         }}
       >
         <div className="container mx-auto px-6 lg:px-16 py-20">
