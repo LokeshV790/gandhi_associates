@@ -64,7 +64,7 @@ const About = () => {
                 Vinod Gandhi and Associates
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                With over 30 years of professional experience, we are a leading Chartered Accountancy firm based in Nagpur, Maharashtra. Our expertise spans statutory audits, taxation, and comprehensive financial advisory services.
+                With over 25 years of professional experience, we are a leading Chartered Accountancy firm based in Nagpur, Maharashtra. Our expertise spans statutory audits, taxation, and comprehensive financial advisory services.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 Under the leadership of CA Vinod Gandhi (CA, BCom), we have built a reputation for solving the most complex financial and compliance challenges. When cases seem unsolvable elsewhere, they find solution here.
@@ -97,7 +97,7 @@ const About = () => {
                     Founder & Managing Partner
                   </p>
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    CA Vinod Gandhi brings over three decades of experience in statutory audits, taxation, and financial advisory. His expertise in handling complex financial cases has made the firm a trusted name in the industry. With a Bachelor of Commerce degree and a Chartered Accountancy qualification, he leads a team dedicated to excellence and client satisfaction.
+                    CA Vinod Gandhi brings over 25 years of experience in statutory audits, taxation, and financial advisory. His expertise in handling complex financial cases has made the firm a trusted name in the industry. With a Bachelor of Commerce degree and a Chartered Accountancy qualification, he leads a team dedicated to excellence and client satisfaction.
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-amber-500 mb-2">30+</div>
+              <div className="text-5xl font-bold text-amber-500 mb-2">25+</div>
               <div className="text-blue-100 font-medium">Years Experience</div>
             </div>
             <div className="text-center">

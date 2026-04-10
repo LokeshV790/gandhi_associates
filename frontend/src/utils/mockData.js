@@ -8,14 +8,14 @@ export const mockData = {
   },
   
   hero: {
-    badge: '30+ Years of Excellence',
-    title: 'Trusted Financial Expertise Since 1995',
+    badge: '25+ Years of Excellence',
+    title: 'Trusted Financial Expertise Since 1999',
     subtitle: 'Comprehensive Audit, Taxation & Advisory Solutions for Your Business Growth',
     description: 'We specialise in solving complex cases and our services help prevent future litigation',
   },
   
   stats: [
-    { value: '30+', label: 'Years Experience' },
+    { value: '25+', label: 'Years Experience' },
     { value: '1000+', label: 'Clients Served' },
     { value: '500+', label: 'Audits Completed' },
     { value: '100%', label: 'Client Satisfaction' },
@@ -23,7 +23,7 @@ export const mockData = {
   
   about: {
     title: 'Vinod Gandhi and Associates',
-    paragraph1: 'With over 30 years of professional experience, we are a leading Chartered Accountancy firm based in Nagpur, Maharashtra. Our expertise spans statutory audits, taxation, and comprehensive financial advisory services.',
+    paragraph1: 'With over 25 years of professional experience, we are a leading Chartered Accountancy firm based in Nagpur, Maharashtra. Our expertise spans statutory audits, taxation, and comprehensive financial advisory services.',
     paragraph2: 'Under the leadership of CA Vinod Gandhi (CA, BCom), we have built a reputation for solving the most complex financial and compliance challenges. When cases seem unsolvable elsewhere, they find solution here.',
   },
   
@@ -54,7 +54,7 @@ export const mockData = {
     {
       icon: Award,
       title: 'Proven Expertise',
-      description: '30+ years of solving complex financial challenges across diverse industries',
+      description: '25+ years of solving complex financial challenges across diverse industries',
     },
     {
       icon: Shield,
